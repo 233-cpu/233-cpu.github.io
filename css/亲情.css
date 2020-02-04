@@ -1,0 +1,525 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	height:800px;
+	background-color: #ebebeb;
+	background-image: url(../img/亲情背景.png);
+	/* background-repeat: no-repeat; */
+	background-position:top center;
+	/* overflow:hidden; */
+}
+@font-face {
+	font-family:'caoti';
+	src: url(../font/叶根友刀锋黑草.ttf);
+}
+.p1{
+	color: white;
+	font-size: 30px;
+	font-weight: bold;
+	display: block;
+	margin: 0 auto;
+	opacity: 0;
+}
+.c{
+	opacity: 0;
+}
+
+.nav{
+	height: 50px;
+	width: 100%;
+	background-color: #FFFFFF;
+}
+.nav-content{
+	margin: 0 auto;
+	width: 905px;
+	overflow: hidden;
+}
+.nav li{
+	float: left;
+	list-style: none;
+}
+.nav a{
+	line-height: 50px;
+	margin: 0 0px;
+	padding:10px 50px;
+	text-decoration: none;
+	color: #000000;
+	font-weight: bold;
+}
+/* .nav a:hover{
+	border-bottom: 3px #ee272f solid;
+	padding-bottom: 7px;
+} */
+
+
+#home-page{
+	position: relative;
+	transition: color 0.4s linear;
+	z-index: 1;
+}
+#home-page:hover{
+	color: white;
+}
+#home-page::before{
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	z-index: -2;
+	transition: transform 0.5s;
+	transform-origin: 0 0;
+	transition-timing-function:cubic-bezier(0.5,1.6,0.4,0.7);
+}
+#home-page::before{
+	transform: scaleY(0);
+}
+#home-page:hover::before{
+	transform: scaleY(1);
+}
+
+#kinship{
+	color: #f5bd32;
+	border-bottom: 3px #f5bd32 solid;
+	padding-bottom: 7px;
+}
+
+#love{
+	position: relative;
+	transition: color 0.4s linear;
+	z-index: 1;
+}
+#love:hover{
+	color: white;
+}
+#love::before{
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #ed758d;
+	z-index: -2;
+	transition: transform 0.5s;
+	transform-origin: 0 0;
+	transition-timing-function:cubic-bezier(0.5,1.6,0.4,0.7);
+}
+#love::before{
+	transform: scaleY(0);
+}
+#love:hover::before{
+	transform: scaleY(1);
+}
+
+#friendship{
+	position: relative;
+	transition: color 0.4s linear;
+	z-index: 1;
+}
+#friendship:hover{
+	color: white;
+}
+#friendship::before{
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #46b4f5;
+	z-index: -2;
+	transition: transform 0.5s;
+	transform-origin: 0 0;
+	transition-timing-function:cubic-bezier(0.5,1.6,0.4,0.7);
+}
+#friendship::before{
+	transform: scaleY(0);
+}
+#friendship:hover::before{
+	transform: scaleY(1);
+}
+
+
+#country{
+	position: relative;
+	transition: color 0.4s linear;
+	z-index: 1;
+}
+#country:hover{
+	color: white;
+}
+#country::before{
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #ee272f;
+	z-index: -2;
+	transition: transform 0.5s;
+	transform-origin: 0 0;
+	transition-timing-function:cubic-bezier(0.5,1.6,0.4,0.7);
+}
+#country::before{
+	transform: scaleY(0);
+}
+#country:hover::before{
+	transform: scaleY(1);
+}
+
+#feedback{
+	position: relative;
+	transition: color 0.4s linear;
+	z-index: 1;
+}
+#feedback:hover{
+	color: white;
+}
+#feedback::before{
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #a8da77;
+	z-index: -2;
+	transition: transform 0.5s;
+	transform-origin: 0 0;
+	transition-timing-function:cubic-bezier(0.5,1.6,0.4,0.7);
+}
+#feedback::before{
+	transform: scaleY(0);
+}
+#feedback:hover::before{
+	transform: scaleY(1);
+}
+
+#kinship1{
+	margin: 0 auto;
+	display: block;
+	position: relative;
+	right: 2000px;
+	top:100px;
+	-webkit-animation: kinship1 6s;
+	-webkit-animation-fill-mode:forwards;
+	opacity: 0;
+}/*设置回家的图片样式*/
+@-webkit-keyframes kinship1{
+	0%{opacity: 0;}
+	80%{transform:translateX(2000px);opacity: 1;}
+	100%{opacity: 0;transform:translateX(2000px)}
+}
+
+#hide{
+	margin:0 auto;
+	position: relative;
+	background-color: black;
+	padding-top: 250px;/*把文字挤下去*/
+	height: 470px;/*720-250*/
+	width: 1280px;
+	bottom: 620px;
+	opacity: 0;
+	-webkit-animation:hide 18s;
+	-webkit-animation-delay: 5s;
+	-webkit-animation-fill-mode:forwards;
+}/*这是用来遮盖第一张图片的div*/
+@-webkit-keyframes hide{
+	0%{opacity: 0;}
+	6%{opacity: 1;}
+	60%{opacity: 1;}
+	100%{opacity:0;}
+}
+
+#kinship2{
+	margin: 0 auto;
+	display: block;/*居中图片*/
+	position: relative;
+	bottom: 1440px;
+	opacity: 0;/*隐藏图片*/
+	-webkit-animation: kinship2 1.5s;
+	-webkit-animation-fill-mode:forwards;
+	-webkit-animation-delay: 15s;
+}/*餐桌*/
+@-webkit-keyframes kinship2{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+
+/*开始设置段落逐行出现*/
+			#p01{
+				animation:p01 1.5s;
+				animation-delay: 6s;
+				animation-fill-mode:forwards;
+			}
+			@keyframes p01{
+				from{opacity: 0;}
+				to{opacity: 1;}
+			}
+			
+			#p02{
+				animation:p02 1.5s;
+				animation-delay: 7.5s;
+				animation-fill-mode:forwards;
+			}
+			@keyframes p02{
+				from{opacity: 0;}
+				to{opacity: 1;}
+			}
+			#p03{
+				animation:p03 1.5s;
+				animation-delay: 9s;
+				animation-fill-mode:forwards;
+			}
+			@keyframes p03{
+				from{opacity: 0;}
+				to{opacity: 1;}
+			}
+			#p04{
+				animation:p04 1.5s;
+				animation-delay: 10.5s;
+				animation-fill-mode:forwards;
+			}
+			@keyframes p04{
+				from{opacity: 0;}
+				to{opacity: 1;}
+			}
+			#p05{
+				animation:p05 1.5s;
+				animation-delay: 12s;
+				animation-fill-mode:forwards;
+			}
+			@keyframes p05{
+				from{opacity: 0;}
+				to{opacity: 1;}
+			}
+			#p06{
+				animation:p06 1.5s;
+				animation-delay: 13.5s;
+				animation-fill-mode:forwards;
+			}
+			@keyframes p06{
+				from{opacity: 0;}
+				to{opacity: 1;}
+			}
+			
+/*调整菜的位置*/
+#c0{
+	position: relative;
+	bottom: 2050px;
+	left: 630px;
+	animation: c0 1s;
+	animation-delay: 16.5s;
+	animation-fill-mode: forwards;
+}
+@keyframes c0{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+#c1{
+	position: relative;
+	bottom: 2350px;
+	left: 80px;
+	animation: c1 0.5s;
+	animation-delay: 17.5s;
+	animation-fill-mode:forwards;
+}
+@keyframes c1{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+#c2{
+	position: relative;
+	bottom: 2400px;
+	left: 50px;
+	animation: c2 0.5s;
+	animation-delay: 18s;
+	animation-fill-mode:forwards;
+}
+@keyframes c2{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+#c3{
+	position: relative;
+	bottom: 2350px;
+	left: 50px;
+	animation: c3 0.5s;
+	animation-delay: 18.5s;
+	animation-fill-mode:forwards;
+}
+@keyframes c3{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+#c4{
+	position: relative;
+	bottom:2350px;
+	left: 30px;
+	animation: c4 0.5s;
+	animation-delay: 19s;
+	animation-fill-mode:forwards;
+}
+@keyframes c4{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+#c5{
+	position: relative;
+	bottom: 2220px;
+	right: 100px;
+	animation: c5 0.5s;
+	animation-delay: 19.5s;
+	animation-fill-mode:forwards;
+}
+@keyframes c5{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+#c6{
+	position:relative;
+	bottom:2050px;
+	right:215px;
+	animation: c6 0.5s;
+	animation-delay: 20s;
+	animation-fill-mode:forwards;
+}
+@keyframes c6{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+#c7{
+	position:relative;
+	bottom:2065px;
+	left: 1000px;
+	animation: c7 0.5s;
+	animation-delay: 20.5s;
+	animation-fill-mode:forwards;
+}
+@keyframes c7{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+#c8{
+	position:relative;
+	bottom:1900px;
+	left: 700px;
+	animation: c8 0.5s;
+	animation-delay: 21s;
+	animation-fill-mode:forwards;
+}
+@keyframes c8{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+#c9{
+	position: relative;
+	bottom: 1880px;
+	left: 230px;
+	animation: c9 0.5s;
+	animation-delay: 21.5s;
+	animation-fill-mode:forwards;
+}
+@keyframes c9{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+#c10{
+	position:relative;
+	bottom: 1900px;
+	right: 250px;
+	animation: c10 0.5s;
+	animation-delay: 22s;
+	animation-fill-mode:forwards;
+}
+@keyframes c10{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+#c11{
+	position: relative;
+	bottom: 2065px;
+	right: 520px;
+	animation: c11 0.5s;
+	animation-delay: 22.5s;
+	animation-fill-mode:forwards;
+}
+@keyframes c11{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+#c12{
+	position: relative;
+	bottom: 2220px;
+	right: 780px;
+	animation: c12 0.5s;
+	animation-delay: 23s;
+	animation-fill-mode:forwards;
+}
+@keyframes c12{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+#c13{
+	position: relative;
+	bottom: 2400px;
+	right: 900px;
+	animation: c13 0.5s;
+	animation-delay: 23.5s;
+	animation-fill-mode:forwards;
+}
+@keyframes c13{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+
+
+.cover{
+	/*半透明的div*/
+	height: 1000px;
+	width: 100%;
+	background-color: black;
+	opacity: 0;
+	position: absolute;
+	top: 50px;
+	left: 0;
+	animation: cover 0.5s;
+	animation-delay: 25s;
+	animation-fill-mode: forwards;
+}
+@keyframes cover{
+	from{opacity: 0;}
+	to{opacity: 0.5;}
+}
+
+.cover .container1 span{
+	position: relative;
+	z-index: 100;
+	color:white;
+	margin-left: 150px;
+	display: block;
+	margin-top: 50px;
+	font-size: 50px;
+	font-family: "楷体";
+}
+
+.container2{
+	padding-top: 200px;
+}
+.cover .container2 span{
+	position: relative;
+	color: white;
+	display: block;
+	margin-left: 0px;
+	font-size: 30px;
+	margin-top: 10px;
+	letter-spacing: 0.5em;
+	text-align: center;
+	font-family:"楷体";
+}
